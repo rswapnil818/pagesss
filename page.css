@@ -1,0 +1,259 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  
+}
+.container{
+    background: linear-gradient(45deg, #273141, #173645,#273141, #c2e9fb);
+    position: relative;
+    width: 100%;
+    height: 200vh;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.1);
+   
+}
+.tab_box{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid rgb(22, 15, 1);
+    position: relative;  
+    
+}
+.tab_box .tab_btn{
+  width: 40%;
+    font-size: 18px;
+    font-weight: 800;
+    color: rgb(255, 183, 0);
+    
+    border: none;
+    padding: 13px;
+    cursor: grab;
+}
+
+.tab_box .tab_btn.active{
+    color: #000;
+}
+
+.content_box{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+   padding:5rem 5rem;
+    
+}
+.content_box .content{
+       display:none;
+       animation: moving .5s ease;
+}
+@keyframes moving{
+from{transform: translateX(50px); opacity: 0;}
+from{transform: translateX(00px); opacity: 1;}
+}
+.content_box .content.active{
+    display: block;
+
+}
+.line{
+    position: absolute;
+    width: 40%;
+    top: 50px;
+    left: 72px;
+    height: 5px;
+    background-color:orange;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+  .card_container{
+    margin-bottom: 2rem;
+    width: 100%;
+    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.card { 
+  background: linear-gradient(45deg, #a1c4fd, #c2e9fb);
+  text-align: center;
+  width: 20vw;
+  height: 50vh;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  
+ 
+}
+
+.card p{
+ padding-top: 15px;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card_content {
+  width: 100%;
+  
+  border-radius: 0 0 10px 10px;
+}
+.card_content h2{
+  top: 0;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  width: 100%;
+
+border-bottom: 2px solid black;
+}
+
+.card_discription{
+ 
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-top: 10px;
+}
+
+/*=================================================*/
+   /*=========================================================================
+   ============================================================================
+   =============================================================================*/
+   
+  
+   @media(max-width:992px) {
+    .header{
+      padding-left:3rem;
+      padding-right: 3rem;
+   }
+
+    .card { 
+      background: linear-gradient(45deg, #a1c4fd, #c2e9fb);
+      text-align: center;
+      width: 15vw;
+      height: 40vh;
+      overflow: hidden;
+      position: relative;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      cursor: pointer;
+      
+     
+    }
+   
+
+
+   }
+
+
+   @media(max-width:800px) {
+    .header{
+      padding-left:3rem;
+      padding-right: 3rem;
+   }
+
+   .logo{
+    font-size: 1rem;
+}
+.action_btn,nav{
+    display: none;
+}
+.side-bar-action-btn{
+    display: block;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+    
+}
+.menu-btn{
+    display: block;
+}
+
+.side-bar{
+    display: block;
+}
+
+
+   }
+   
+  
+   @media(max-width:550px) {
+   
+    .tab_box .tab_btn{
+        font-size: 17px;
+        font-weight: 400;
+        color: rgb(255, 183, 0);
+         width: 50%;
+         border: none;
+         cursor: grab;
+         padding: 8px;
+        
+    } 
+    .tab_box{
+    justify-content: space-between;
+    top: 15;
+    position: fixed;
+    z-index: 50;
+    }
+    .line{
+      width: 35%;
+      top: 35px;
+      left: 0;
+      height: 4px;
+
+    }
+
+.content_box{
+ 
+  height: 100vh;
+  top: 0;
+  padding-top: 3rem;
+  padding-left: 1px;
+  padding-right: 1px;
+  display: flex;
+  
+}
+
+.card{
+  width: 47%;
+  gap: 1rem;
+  
+ 
+}
+.card_container{
+ 
+  gap: 0.5rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.card_content h2{
+  font-size: 0.7rem;
+}
+.content{
+  width: 100%;
+ 
+  
+ 
+}
+  /*----------------------*/ 
+   }
+   
+    
+
+  
+   
+   
+   /*====================================================================================*/
+ 
